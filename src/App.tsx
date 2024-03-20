@@ -29,7 +29,7 @@ function App() {
           foodName="املت"
           description="تخم مرغ + گوجه + سبزیجات"
           count="10"
-          price="60,000"
+          price="40,000"
         />
         <FoodItem
           image={beanFeedImage}
