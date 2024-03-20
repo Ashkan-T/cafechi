@@ -1,0 +1,65 @@
+body{
+  background-color: #2a2a2a;
+}
+
+main{
+  margin-bottom: 900px;
+}
+
+.food-card{
+  width: 300px;
+  height: 380px;
+  background-color: gray;
+  margin-top: 20px;
+  margin-right: 65px;
+  border-radius: 25px;
+  position: relative;
+  float: right;
+  box-sizing: border-box;
+}
+
+.top-background-card{
+  width: 300px;
+  height: 200px;
+  background-color: red;
+  border-radius: 25px 25px 200px 200px;
+  position: relative;
+  box-shadow: 0 0 10px 1px  #444;
+}
+
+.food-image{
+  width: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 90px;
+  left: 75px;
+}
+
+.food-cnt{
+  position: absolute;
+  top: 5px;
+  left: 110px;
+  font-weight: bolder;
+  font-size: 70px;
+  color: lightgray;
+}
+
+.food-details{
+  position: absolute;
+  top: 248px;
+  right: 10px;
+  direction: rtl;
+}
+
+.food-details > h3{
+  font-size: 20px;
+}
+
+.food-price{
+  position: absolute;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(13, 81, 103);
+  top: 265px;
+  left: 10px;
+}

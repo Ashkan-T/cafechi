@@ -1,0 +1,30 @@
+.cafe-header-container{
+  padding: 10px;
+  margin: 1px;
+  text-align: center;
+  direction: rtl;
+  position: relative;
+}
+
+.cafe-header-logo,
+.cafe-header-name,
+.cafe-header-QR-code{
+  display: inline-block;
+}
+
+.cafe-header-logo{
+  width: 128px;
+  height: 128px;
+}
+
+.cafe-header-QR-code{
+  float: left;
+  margin-left: 30px;
+}
+
+.cafe-header-name{
+  position: absolute;
+  top: 32px;
+  right: 770px;
+  color: gold;
+}

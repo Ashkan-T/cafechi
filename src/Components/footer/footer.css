@@ -1,0 +1,37 @@
+ footer{
+    margin-top: 500px;
+    font-size: 12px;
+    padding-right: 210px;
+    position: relative;
+  }
+  
+  .footer-QRCodes{
+    float: right;
+    margin-right: 60px;
+    position: relative;
+    margin-bottom: 40px;
+    color: gold;
+    position: relative;
+    float: right;
+    padding-bottom: 30px;
+    padding: 0px 10px 30;
+  }
+  
+  .footer-personal-QRCode{
+    margin-top: 100;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+  }
+  
+  .footer-Text{
+    position: absolute;
+    top: -80px;
+    right: 40px;
+    color: gold;
+  }
+
+  .footer-QRCode-Desc{
+    padding-left: 120px;
+  }
