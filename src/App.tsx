@@ -21,50 +21,50 @@ function App() {
           image={hamburgerImage}
           foodName="همبرگر"
           description="گوشت چرخ کرده + سبزیجات"
-          count="20"
-          price="120,000"
+          count={20}
+          price={120000}
         />
         <FoodItem
           image={omeletImage}
           foodName="املت"
           description="تخم مرغ + گوجه + سبزیجات"
-          count="10"
-          price="40,000"
+          count={-1}
+          price={40000}
         />
         <FoodItem
           image={beanFeedImage}
           foodName="خوراک لوبیا"
           description="لوبیا چیتی + قارچ + روغن زیتون"
-          count="15"
-          price="60,000"
+          count={15}
+          price={60000}
         />
         <FoodItem
           image={lentilFeedImage}
           foodName="خوراک عدس"
           description="عدس + سیب زمینی + روغن زیتون"
-          count="15"
-          price="60,000"
+          count={15}
+          price={60000}
         />
         <FoodItem
           image={eggplantCurdImage}
           foodName="کشک بادمجان"
           description="بادمجان کبابی + کشک + گردو + سیر داغ و پیاز داغ"
-          count="5"
-          price="90,000"
+          count={0}
+          price={90000}
         />
         <FoodItem
           image={homsImage}
           foodName="حمص"
           description="نخود + ارده + ادویه + روغن زیتون"
-          count="5"
-          price="110,000"
+          count={5}
+          price={110000}
         />
         <FoodItem
           image={specialPotatosImage}
           foodName="سیب زمینی ویژه"
           description="سیب زمینی سرخ شده + پنیر گودا"
-          count="15"
-          price="90,000"
+          count={15}
+          price={90000}
         />
       </main>
       <Footer
