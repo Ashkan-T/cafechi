@@ -18,6 +18,10 @@ main{
   box-sizing: border-box;
 }
 
+.unavailable{
+  opacity: 0.4;
+}
+
 .top-background-card{
   width: 300px;
   height: 200px;
@@ -38,17 +42,21 @@ main{
 .food-cnt{
   position: absolute;
   top: 5px;
-  left: 110px;
+  left: 100px;
   font-weight: bolder;
   font-size: 70px;
   color: lightgray;
+  width: 100px;
+  text-align: center;
 }
 
 .food-cnt-infinity{
   position: absolute;
-  top: 10px;
-  left: 90px;
-  width: 110px;
+  top: -35px;
+  left: 109.15px;
+  font-size: 100px;
+  color: lightgray;
+  font-weight: bolder;
 }
 
 .food-details{

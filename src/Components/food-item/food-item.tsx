@@ -16,7 +16,7 @@ function FoodItem(props: {
     CountSpan = <></>;
   }
   if (props.count < 0) {
-    CountSpan = <img className="food-cnt-infinity" src={infinity} alt="" />;
+    CountSpan = <span className="food-cnt-infinity"> &infin; </span>;
   }
   return (
     <article className={"food-card " + foodAvailabilityClass}>
