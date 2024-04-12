@@ -1,6 +1,5 @@
-import React from "react";
 import "./food-item.css";
-import infinity from "../../images/pngimg.com - symbol_infinity_PNG35.png";
+import { useState } from "react";
 
 function FoodItem(props: {
   image: any;
@@ -8,18 +7,31 @@ function FoodItem(props: {
   count: number;
   price: number;
   description: string;
+  foodCardMode: any;
 }) {
   let foodAvailabilityClass = "available";
-  let CountSpan = <span className="food-cnt">{props.count}</span>;
+
+  const [foodCount, setFoodCount] = useState(props.count);
+
+  const handleScreenClick = () => {
+    if (foodCount < props.count && props.foodCardMode === "increase") {
+      setFoodCount(foodCount + 1);
+    }
+    if (foodCount > 0 && props.foodCardMode === "decrease") {
+      setFoodCount(foodCount - 1);
+    }
+    console.log(foodCount);
+  };
+
   if (props.count === 0) {
     foodAvailabilityClass = "unavailable";
-    CountSpan = <></>;
   }
-  if (props.count < 0) {
-    CountSpan = <span className="food-cnt-infinity"> &infin; </span>;
-  }
+
   return (
-    <article className={"food-card " + foodAvailabilityClass}>
+    <article
+      onClick={handleScreenClick}
+      className={"food-card " + foodAvailabilityClass}
+    >
       <div className="top-background-card">
         <img src={props.image} alt={props.foodName} className="food-image" />
       </div>
@@ -27,7 +39,8 @@ function FoodItem(props: {
         <h3>{props.foodName}</h3>
         <p>{props.description}</p>
       </div>
-      {CountSpan}
+      {props.count > 0 && <span className="food-cnt">{foodCount}</span>}
+      {props.count < 0 && <span className="food-cnt">&infin;</span>}
       <div className="food-price">{props.price}</div>
     </article>
   );

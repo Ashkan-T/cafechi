@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import logo from "./images/336442851_1277974583102386_5163510510687732777_n-1.png";
 import hamburgerImage from "./images/Foods/pngtree-hamburger-png-illustration-png-image_10158744.png";
@@ -13,8 +13,15 @@ import Footer from "./Components/footer/footer";
 import FoodItem from "./Components/food-item/food-item";
 
 function App() {
+  const [mode, setMode] = useState("increase");
+  const toggleMode = () => {
+    setMode(mode === "increase" ? "decrease" : "increase");
+    console.log(mode);
+  };
+
   return (
     <div>
+      <input type="text" onKeyUp={toggleMode} />
       <Header cafeName="Café Chi" Instagram="cafechi1402" logo={logo} />
       <main>
         <FoodItem
@@ -23,6 +30,7 @@ function App() {
           description="گوشت چرخ کرده + سبزیجات"
           count={20}
           price={120000}
+          foodCardMode={mode}
         />
         <FoodItem
           image={omeletImage}
@@ -30,6 +38,7 @@ function App() {
           description="تخم مرغ + گوجه + سبزیجات"
           count={-1}
           price={40000}
+          foodCardMode={mode}
         />
         <FoodItem
           image={beanFeedImage}
@@ -37,6 +46,7 @@ function App() {
           description="لوبیا چیتی + قارچ + روغن زیتون"
           count={15}
           price={60000}
+          foodCardMode={mode}
         />
         <FoodItem
           image={lentilFeedImage}
@@ -44,6 +54,7 @@ function App() {
           description="عدس + سیب زمینی + روغن زیتون"
           count={15}
           price={60000}
+          foodCardMode={mode}
         />
         <FoodItem
           image={eggplantCurdImage}
@@ -51,6 +62,7 @@ function App() {
           description="بادمجان کبابی + کشک + گردو + سیر داغ و پیاز داغ"
           count={0}
           price={90000}
+          foodCardMode={mode}
         />
         <FoodItem
           image={homsImage}
@@ -58,6 +70,7 @@ function App() {
           description="نخود + ارده + ادویه + روغن زیتون"
           count={5}
           price={110000}
+          foodCardMode={mode}
         />
         <FoodItem
           image={specialPotatosImage}
@@ -65,6 +78,7 @@ function App() {
           description="سیب زمینی سرخ شده + پنیر گودا"
           count={15}
           price={90000}
+          foodCardMode={mode}
         />
       </main>
       <Footer

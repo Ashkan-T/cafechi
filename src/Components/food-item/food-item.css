@@ -18,6 +18,11 @@ main{
   box-sizing: border-box;
 }
 
+.food-card-button{
+  position: absolute;
+  top: 0px;
+}
+
 .unavailable{
   opacity: 0.4;
 }
@@ -48,15 +53,6 @@ main{
   color: lightgray;
   width: 100px;
   text-align: center;
-}
-
-.food-cnt-infinity{
-  position: absolute;
-  top: -35px;
-  left: 109.15px;
-  font-size: 100px;
-  color: lightgray;
-  font-weight: bolder;
 }
 
 .food-details{
