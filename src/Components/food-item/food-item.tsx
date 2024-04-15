@@ -1,5 +1,6 @@
+import { CountControlContext } from "../../App";
 import "./food-item.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 function FoodItem(props: {
   image: any;
@@ -7,18 +8,21 @@ function FoodItem(props: {
   count: number;
   price: number;
   description: string;
-  foodCardMode: any;
 }) {
   let foodAvailabilityClass = "available";
 
+  const foodCardMode = useContext(CountControlContext);
   const [foodCount, setFoodCount] = useState(props.count);
 
-  const handleScreenClick = () => {
-    if (foodCount < props.count && props.foodCardMode === "increase") {
-      setFoodCount(foodCount + 1);
-    }
-    if (foodCount > 0 && props.foodCardMode === "decrease") {
-      setFoodCount(foodCount - 1);
+  const handleClick = () => {
+    if (foodCardMode > 0) {
+      if (foodCount < props.count) {
+        setFoodCount(foodCount + 1);
+      }
+    } else {
+      if (foodCount > 0) {
+        setFoodCount(foodCount - 1);
+      }
     }
     console.log(foodCount);
   };
@@ -29,7 +33,7 @@ function FoodItem(props: {
 
   return (
     <article
-      onClick={handleScreenClick}
+      onClick={handleClick}
       className={"food-card " + foodAvailabilityClass}
     >
       <div className="top-background-card">
